@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <title>Survey</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-size: 10px;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        main {
+            text-align: center;
+        }
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 0;
+        }
+        p {
+            font-size: 2rem;
+        }
+        #description {
+            font-style: italic;
+            margin-top: 1rem;
+            margin-bottom: 3rem;
+        }
+        form {
+            display: inline-block;
+            padding: 2rem;
+            background: gray;
+            border-radius: 0.5rem;
+            width: 80%;
+            margin: 0 auto 3rem;
+        }
+        input, button, select, option, textarea {
+            font-family: inherit;
+            font-size: 1.6rem;
+            line-height: inherit;
+        }
+        .form-group {
+            text-align: start;
+            margin-bottom: 3rem;
+        }
+        label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            font-size: 2rem;
+        }
+        .form-control {
+            width: 100%;
+            padding: 0.7rem;
+            border: 0.1rem solid black;
+            border-radius: 0.5rem;
+            transition: box-shadow .2s;
+        }
+        .form-control:hover {
+            border-color: lightblue;
+            box-shadow: 0 0 .5rem .1rem blue;
+        }
+        .form-control:focus {
+            border-color: blue;
+            outline: 0;
+            box-shadow: 0 0 1rem 0.2rem blue;
+        }
+        .form-group-description {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            font-size: 2rem;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 1rem;
+            min-height: 1.8rem;
+            min-width: 1.8rem;
+            border: 0.1rem solid black;
+            border-radius: 0.5rem;
+            transition: box-shadow .2s;
+        }
+        #textarea-label {
+            margin: 0;
+        }
+        textarea {
+            margin-top: 0;
+            border-radius: 5px;
+        }
+        #form-group-submit {
+            text-align: center;
+            margin-bottom: 0;
+        }
+        #submit {
+            height: 4rem;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.8rem;
+            font-weight: bold;
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1 id="title">Test Survey Form</h1>
+            <p id="description">This is a sample survery</p>
+        </header>
+
+        <form id="survey-form">
+            <div class="form-group">
+                <label for="name" id="name-label">Name</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email" id="email-label">Email</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="number" id="number-label">Number</label>
+                <input type="number" id="number" name="number" min="1" max="5" class="form-control" placeholder="Enter a number">
+            </div>
+
+            <div class="form-group">
+                <label for="dropdown">Dropdown</label>
+                <select id="dropdown" name="dropdown" class="form-control" required>
+                    <option disabled selected>Select one</option>
+                    <option value="cats">Cats</option>
+                    <option value="dogs">Dogs</option>
+                    <option value="hamsters">Hamsters</option>
+                    <option value="birds">Birds</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <p class="form-group-description">Favorite fruit?</p>
+                <label for="fruitChoice1">
+                    <input type="radio" id="fruitChoice1" name="fruit" value="apple">
+                    Apple
+                </label>
+                <label for="fruitChoice2">
+                    <input type="radio" id="fruitChoice2" name="fruit" value="orange">
+                    Orange
+                </label>
+                <label for="fruitChoice3">
+                    <input type="radio" id="fruitChoice3" name="fruit" value="pear">
+                    Pear
+                </label>
+            </div>
+
+            <div class="form-group">
+                <p class="form-group-description">Favorite vegetable?</p>
+                <label for="vegetableChoice1">
+                    <input type="radio" id="vegetableChoice1" name="vegetable" value="carrot">
+                    Carrot
+                </label>
+                <label for="vegetableChoice2">
+                    <input type="radio" id="vegetableChoice2" name="vegetable" value="pepper">
+                    Pepper
+                </label>
+                <label for="vegetableChoice3">
+                    <input type="radio" id="vegetableChoice3" name="vegetable" value="broccoli">
+                    Broccoli
+                </label>
+            </div>
+
+            <div class="form-group">
+                <p class="form-group-description">Do you own the following?</p>
+                <label for="ownChoice1">
+                    <input type="checkbox" name="own" id="ownChoice1" value="car">
+                    Car
+                </label>
+                <label for="ownChoice2">
+                    <input type="checkbox" name="own" id="ownChoice2" value="bike">
+                    Bike
+                </label>
+                <label for="ownChoice3">
+                    <input type="checkbox" name="own" id="ownChoice3" value="legs">
+                    Legs
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label id="textarea-label" for="comments">Any comments?</label><br>
+                <textarea name="comments" id="comments" class="form-control" cols="30" rows="10">Type here</textarea>
+            </div>
+
+            <div id="form-group-submit" class="form-group">
+                <button type="submit" id="submit">Submit</button>
+            </div>
+        </form>
+    </main>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
