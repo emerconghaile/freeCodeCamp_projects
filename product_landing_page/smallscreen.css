@@ -1,3 +1,46 @@
-html {
-    color: blue;
+#logo {
+    float: none;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+.links {
+    float: none;
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    right: 0;
+    top: 7.5rem;
+    bottom: 100%;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .85);
+    transition: all .5s ease-in-out;
+}
+.nav-link {
+    font-weight: bold;
+    color: white;
+    font-size: 2rem;
+}
+:checked ~ .links {
+    bottom: 0;
+}
+#icon-burger {
+    display: block;
+}
+.line {
+    transition: all .5s ease-in-out;
+}
+:checked ~ #icon-burger .line:nth-child(1) {
+    transform: translateY(10px) rotate(225deg);
+}
+:checked ~ #icon-burger .line:nth-child(3) {
+    transform: translateY(-10px) rotate(-225deg);
+}
+:checked ~ #icon-burger .line:nth-child(2) {
+    transform: scale(0);
+    opacity: 0;
 }

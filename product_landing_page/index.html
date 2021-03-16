@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Landing Page</title>
     <link rel="stylesheet" href="main.css" >
-    <link rel="stylesheet" media="screen and (max-width: 560px)" href="smallscreen.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="smallscreen.css">
     <script src="https://kit.fontawesome.com/af5410f08d.js" crossorigin="anonymous"></script>
     <style>
         
@@ -13,15 +13,21 @@
 </head>
 <body>
     <header id="header">
-        <div id="logo">
-            <a href="#home"><img id="header-img" src="logo.png" alt="Company logo"></a>
-        </div>
         <nav id="nav-bar">
-            <ul>
+            <input id="nav-toggle" type="checkbox">
+            <div id="logo">
+                <a href="#home"><img id="header-img" src="logo.png" alt="Company logo"></a>
+            </div>
+            <ul class="links">
                 <li><a href="#features" class="nav-link">Features</a></li>
-                <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+                <li><a href="#how-it-works" class="nav-link">How</a></li>
                 <li><a href="#pricing" class="nav-link">Pricing</a></li>
             </ul>
+            <label for="nav-toggle" id="icon-burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </label>
         </nav>
     </header>
     <main>
@@ -69,31 +75,37 @@
             <h2 class="section-titles">Pricing</h2>
             <div id="products">
                 <div class="product">
-                        <h3>Good</h3>
+                    <h3>Good</h3>
+                    <div class="product-desc">
                         <p>$600</p>
                         <ol>
                             <li>Needs love</li>
                             <li>Almost an eyesore</li>
-                            <li>Your neighbors will want a better neighbor</li>
+                            <li>Neighbors want a better neighbor</li>
                         </ol>
+                    </div>
                 </div>
                 <div class="product">
-                        <h3>Gooder</h3>
+                    <h3>Gooder</h3>
+                    <div class="product-desc">
                         <p>$900</p>
                         <ol>
                             <li>Always works</li>
                             <li>It's shiny</li>
-                            <li>Your neighbors will finally wave back at you</li>
+                            <li>Neighbors wave back at you</li>
                         </ol>
+                    </div>
                 </div>
                 <div class="product">
-                        <h3>Goodest</h3>
+                    <h3>Goodest</h3>
+                    <div class="product-desc">
                         <p>$1200</p>
                         <ol>
                             <li>Never breaks</li>
                             <li>Absolutely stunning</li>
-                            <li>Your neighbors will envy you</li>
+                            <li>Neighbors will envy you</li>
                         </ol>
+                    </div>
                 </div>
             </div>
         </section>

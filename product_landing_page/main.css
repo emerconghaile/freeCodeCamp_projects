@@ -13,55 +13,80 @@ html, body {
     width: 100%;
 }
 header {
-    position: sticky;
+    position: fixed;
+    z-index: 10;
     top: 0;
-    min-height: 6rem;
+    left: 0;
+    right: 0;
+    height: 7.5rem;
     width: 100%;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: darkgray;
+    padding: 0 5%;
     border-bottom: 0.1rem solid black;
+    background-color: orange;
 }
 #logo {
     width: 60%;
+    height: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
 }
 #header-img {
-    height: auto;
-    max-width: 200px;
-    padding-left: 2rem;
+    height: 100%;
+    width: auto;
+    padding-top: .7rem;
+    padding-bottom: .7rem;
 }
 nav ul {
     list-style: none;
+    width: 40%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    float: right;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    text-align: center;
 }
 .nav-link {
-    font-size: 1.8rem;
-    text-decoration: none;
-    color: black;
     display: block;
-    padding: 1em 1em;
-}
-nav li:last-of-type {
-    padding-right: 2rem;
+    padding: 1em;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
 }
 .nav-link:hover {
+    border-radius: 1rem;
     background-color: black;
     color: white;
+}
+#nav-toggle {
+    position: absolute;
+}
+#nav-toggle {
+    display: none;
+}
+#icon-burger {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.line {
+    width: 3rem;
+    height: .5rem;
+    background-color: white;
+    margin: .5rem;
+    border-radius: .3rem;
 }
 main {
     text-align: center;
     max-width: fit-content;
     width: 100%;
     max-width: 100rem;
-    margin: 0 auto;
-}
-#home {
-    margin-top: 1rem;
+    margin: 8.5rem auto 0 auto;
 }
 #home h1 {
     font-size: 6rem;
@@ -81,7 +106,7 @@ main {
 }
 #email {
     max-width: 40rem;
-    width: 100%;
+    width: 80%;
     height: 3rem;
     font-size: 1.5rem;
     border-radius: 5px;
@@ -130,8 +155,10 @@ main {
 #how-it-works {
     margin-top: 4rem;
 }
-#how-it-works iframe {
+#video {
     border-radius: 1rem;
+    padding: 0 2rem;
+    width: 80%;
 }
 #pricing {
     margin-top: 4rem;
@@ -150,6 +177,9 @@ main {
     border: 0.2rem solid black;
     border-radius: 1rem;
 }
+.product-desc {
+    padding: 0 2rem;
+}
 .product h3 {
     font-size: 2.3rem;
     background-color: orange;
@@ -158,19 +188,19 @@ main {
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
 }
-.product p {
+.product-desc p {
     font-size: 2.1rem;
     font-weight: 600;
     margin-top: 1rem;
     margin-bottom: 1.5rem;
 }
-.product li{
+.product-desc li{
     list-style: none;
     margin-bottom: 1rem;
     font-size: 1.7rem;
 }
-.product li:last-of-type {
-    margin-bottom: 1rem;
+.product-desc li:last-of-type {
+    margin-bottom: 1.5rem;
 }
 footer {
     margin-top: 3rem;
